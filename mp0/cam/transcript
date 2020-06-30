@@ -1,0 +1,152 @@
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work  {./include/cam_types.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:11 on Jan 28,2020
+# vlog -sv -work work ./include/cam_types.sv 
+# -- Compiling package cam_types
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:52:11 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./include/cam_interface.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:11 on Jan 28,2020
+# vlog -sv -work work ./include/cam_interface.sv 
+# -- Compiling package cam_interface_sv_unit
+# -- Importing package cam_types
+# -- Compiling interface CAMCtls
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:52:11 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./include/cam_itf.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:11 on Jan 28,2020
+# vlog -sv -work work ./include/cam_itf.sv 
+# -- Compiling interface cam_itf
+# -- Importing package cam_types
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:52:11 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./grader/grader.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:11 on Jan 28,2020
+# vlog -sv -work work ./grader/grader.sv 
+# -- Compiling package grader_sv_unit
+# -- Importing package cam_types
+# -- Compiling module grader
+# 
+# Top level modules:
+# 	grader
+# End time: 20:52:11 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./hdl/cam_datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:11 on Jan 28,2020
+# vlog -sv -work work ./hdl/cam_datapath.sv 
+# -- Compiling package cam_datapath_sv_unit
+# -- Importing package cam_types
+# -- Compiling module cam_datapath
+# 
+# Top level modules:
+# 	cam_datapath
+# End time: 20:52:11 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./hdl/cam_controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:11 on Jan 28,2020
+# vlog -sv -work work ./hdl/cam_controller.sv 
+# -- Compiling package cam_controller_sv_unit
+# -- Importing package cam_types
+# -- Compiling module one_hot0_encoder
+# -- Compiling module priority_encoder
+# -- Compiling module cam_controller
+# 
+# Top level modules:
+# 	cam_controller
+# End time: 20:52:11 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./hdl/cam.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:11 on Jan 28,2020
+# vlog -sv -work work ./hdl/cam.sv 
+# -- Compiling package cam_sv_unit
+# -- Importing package cam_types
+# -- Compiling module cam
+# 
+# Top level modules:
+# 	cam
+# End time: 20:52:12 on Jan 28,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./hvl/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:12 on Jan 28,2020
+# vlog -sv -work work ./hvl/top.sv 
+# -- Compiling package top_sv_unit
+# -- Importing package cam_types
+# -- Compiling module testbench
+# -- Compiling interface CAMCtls
+# -- Compiling interface cam_itf
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 20:52:12 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work  {./hvl/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:52:12 on Jan 28,2020
+# vlog -sv -work work ./hvl/testbench.sv 
+# -- Compiling package testbench_sv_unit
+# -- Importing package cam_types
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:52:12 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiv_hssi_ver -L stratixiv_pcie_hip_ver -L stratixiv_ver -L rtl_work -L work -voptargs="+acc"  top
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiv_hssi_ver -L stratixiv_pcie_hip_ver -L stratixiv_ver -L rtl_work -L work -voptargs=""+acc"" top 
+# Start time: 20:52:12 on Jan 28,2020
+# Loading sv_std.std
+# Loading work.cam_types
+# Loading work.top_sv_unit
+# Loading work.top
+# Loading work.cam_itf
+# Loading work.testbench_sv_unit
+# Loading work.testbench
+# Loading work.cam_sv_unit
+# Loading work.cam
+# Loading work.CAMCtls
+# Loading work.cam_datapath_sv_unit
+# Loading work.cam_datapath
+# Loading work.cam_controller_sv_unit
+# Loading work.cam_controller
+# Loading work.priority_encoder
+# Loading work.one_hot0_encoder
+# Loading work.grader_sv_unit
+# Loading work.grader
+# 
+# run -all
+# Starting CAM Tests
+# GDR: Grader Running
+# ** Warning: (vsim-8360) ./hdl/cam_controller.sv(53): The if/case statement is not unique.
+#    Time: 0 ps  Iteration: 0  Instance: /top/tb/dut/ctl/invalid_entry_finder
+# ** Note: $finish    : include/cam_itf.sv(14)
+#    Time: 2585 ps  Iteration: 1  Instance: /top/tb
+# GDR: Cleaning Up Grading Run...
+# End time: 20:52:12 on Jan 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
